@@ -121,6 +121,28 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Image slider opacity effect
+document.addEventListener('DOMContentLoaded', () => {
+    const heroImage = document.querySelector('.hero-bg-image');
+    if (heroImage) {
+        // Add hover effect to change opacity
+        heroImage.addEventListener('mouseenter', () => {
+            heroImage.style.opacity = '0.5';
+        });
+        
+        heroImage.addEventListener('mouseleave', () => {
+            heroImage.style.opacity = '0.3';
+        });
+        
+        // Add scroll effect to change opacity
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const opacity = Math.max(0.1, 0.3 - (scrolled * 0.0005));
+            heroImage.style.opacity = opacity;
+        });
+    }
+});
+
 // Form handling (if you add a contact form later)
 function handleContactForm(event) {
     event.preventDefault();
