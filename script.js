@@ -124,21 +124,46 @@ window.addEventListener('scroll', () => {
 // Image slider opacity effect
 document.addEventListener('DOMContentLoaded', () => {
     const heroImage = document.querySelector('.hero-bg-image');
-    if (heroImage) {
+    const heroContainer = document.querySelector('.hero-container');
+    
+    if (heroImage && heroContainer) {
         // Add hover effect to change opacity
-        heroImage.addEventListener('mouseenter', () => {
-            heroImage.style.opacity = '0.5';
+        heroContainer.addEventListener('mouseenter', () => {
+            heroImage.style.opacity = '0.6';
+            heroContainer.style.background = 'rgba(0, 0, 0, 0.6)';
         });
         
-        heroImage.addEventListener('mouseleave', () => {
-            heroImage.style.opacity = '0.3';
+        heroContainer.addEventListener('mouseleave', () => {
+            heroImage.style.opacity = '0.4';
+            heroContainer.style.background = 'rgba(0, 0, 0, 0.3)';
         });
         
         // Add scroll effect to change opacity
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const opacity = Math.max(0.1, 0.3 - (scrolled * 0.0005));
-            heroImage.style.opacity = opacity;
+            const heroSection = document.querySelector('.hero');
+            const heroHeight = heroSection.offsetHeight;
+            
+            if (scrolled < heroHeight) {
+                const opacity = Math.max(0.2, 0.4 - (scrolled * 0.0003));
+                heroImage.style.opacity = opacity;
+                
+                // Fade out text as user scrolls
+                const textOpacity = Math.max(0.3, 1 - (scrolled * 0.002));
+                heroContainer.style.opacity = textOpacity;
+            }
+        });
+        
+        // Add parallax effect to the background image
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroSection = document.querySelector('.hero');
+            const heroHeight = heroSection.offsetHeight;
+            
+            if (scrolled < heroHeight) {
+                const translateY = scrolled * 0.5;
+                heroImage.style.transform = `translateY(${translateY}px)`;
+            }
         });
     }
 });
