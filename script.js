@@ -192,6 +192,68 @@ document.querySelectorAll('.project-link').forEach(link => {
     });
 });
 
+// Resume download functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const resumeBtn = document.querySelector('.resume-btn');
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', (e) => {
+            // Add download animation
+            resumeBtn.style.transform = 'scale(0.95)';
+            resumeBtn.style.background = '#28a745';
+            resumeBtn.innerHTML = '<i class="fas fa-download"></i> Downloading...';
+            
+            // Reset button after animation
+            setTimeout(() => {
+                resumeBtn.style.transform = 'scale(1)';
+                resumeBtn.style.background = '#007bff';
+                resumeBtn.innerHTML = 'Resume';
+            }, 2000);
+            
+            // Show success message
+            setTimeout(() => {
+                showNotification('Resume downloaded successfully!', 'success');
+            }, 1000);
+        });
+    }
+});
+
+// Notification system for download feedback
+function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotification = document.querySelector('.notification');
+    if (existingNotification) {
+        existingNotification.remove();
+    }
+    
+    // Create notification element
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <i class="fas fa-${type === 'success' ? 'check-circle' : 'info-circle'}"></i>
+            <span>${message}</span>
+        </div>
+    `;
+    
+    // Add to page
+    document.body.appendChild(notification);
+    
+    // Show notification
+    setTimeout(() => {
+        notification.classList.add('show');
+    }, 100);
+    
+    // Hide and remove notification
+    setTimeout(() => {
+        notification.classList.remove('show');
+        setTimeout(() => {
+            if (notification.parentNode) {
+                notification.remove();
+            }
+        }, 300);
+    }, 3000);
+}
+
 // Add hover effects for skill categories
 document.querySelectorAll('.skill-category').forEach(category => {
     category.addEventListener('mouseenter', () => {
