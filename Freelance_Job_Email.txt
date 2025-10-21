@@ -1,0 +1,77 @@
+Subject: Experienced PHP Developer Available for Freelance Projects - 10+ Years Experience
+
+Dear Hiring Manager/Client,
+
+I hope this email finds you well. I am writing to express my interest in freelance PHP web development opportunities with your organization.
+
+ABOUT ME:
+I am Jai Kishan Soni, a passionate and experienced PHP Developer with over 10 years of expertise in building robust web applications and backend systems. I am passionate about what I do and always give 100%. When I undertake a project or task, I don't just complete it, I go the extra mile and make it better than requested.
+
+MY EXPERTISE:
+• **Languages:** PHP, JavaScript, Node.js, HTML5/CSS3, jQuery
+• **Frameworks:** Laravel, CodeIgniter, CakePHP, Yii2, Express.js
+• **Databases:** MySQL, MongoDB, SQL Server, NoSQL
+• **APIs & Payment Integration:** REST APIs, Stripe, PayPal, RazorPay, Google Maps API
+• **DevOps & Tools:** Jenkins, SonarCube, Git, Jira, XAMPP, Visual Studio Code
+• **Methodologies:** Agile-Scrum, DevOps, MVC Architecture
+
+RECENT WORK EXPERIENCE:
+• **ForwardCode TechStudio** (Apr 2024 - Feb 2025) - REST API Developer using Node.js with Express Framework
+• **Matellio Navigating Ideas** (Apr 2019 - Aug 2023) - Backend development using PHP, Laravel, CodeIgniter
+• **Compton Infotech Pvt Ltd** (May 2018 - Apr 2019) - Cross-browser testing and W3C compliance
+
+RECENT PROJECTS I'VE DEVELOPED:
+• WatchmeSports (https://watchmesports.com/site/) - Sports platform
+• CECA (https://www.timelockdocs.com/) - Time lock documentation system
+• WealthSSL (https://wealthssl.com/wms/admin/site/login) - Wealth management system
+• Fairface (https://in.fairface.com/) - Beauty and cosmetics platform
+• Sheppard Agency (https://voices.sheppard.agency/) - Voice talent agency platform
+
+WHAT I CAN OFFER:
+✅ Full-stack PHP web development
+✅ REST API development and integration
+✅ Database design and optimization (MySQL, MongoDB)
+✅ Payment gateway integration (Stripe, PayPal, RazorPay)
+✅ Cross-browser compatibility and W3C compliance
+✅ Responsive web design
+✅ E-commerce solutions
+✅ CMS development and customization
+✅ Third-party API integrations
+✅ Performance optimization and security implementation
+
+MY APPROACH:
+• I believe in three key principles: Good Listening, Good Observing, and Good Absorbing
+• I work closely with clients to understand their requirements and deliver solutions that exceed expectations
+• I provide regular updates and maintain clear communication throughout the project
+• I ensure all code is clean, well-documented, and follows best practices
+• I offer post-development support and maintenance services
+
+AVAILABILITY:
+I am currently available for freelance projects and can work flexible hours to accommodate different time zones. I can handle both short-term and long-term projects.
+
+RATES & TERMS:
+I offer competitive rates based on project complexity and requirements. I'm happy to discuss your specific needs and provide a detailed quote.
+
+CONTACT INFORMATION:
+📧 Email: sonijai64@gmail.com
+📱 Phone: +91-8755473551
+📍 Location: Jodhpur, Rajasthan, India
+🔗 LinkedIn: https://www.linkedin.com/in/jai-soni-a03476a7/
+💼 Portfolio: [Your website URL]
+
+NEXT STEPS:
+I would love to discuss how I can help bring your web development projects to life. I'm available for a call or video meeting at your convenience to discuss your specific requirements and how I can contribute to your success.
+
+Thank you for considering my application. I look forward to hearing from you and the possibility of working together.
+
+Best regards,
+
+Jai Kishan Soni
+PHP Developer & Web Development Specialist
+Email: sonijai64@gmail.com
+Phone: +91-8755473551
+LinkedIn: https://www.linkedin.com/in/jai-soni-a03476a7/
+
+---
+P.S. I have attached my detailed CV for your reference. Feel free to reach out if you have any questions or would like to discuss a specific project.
+

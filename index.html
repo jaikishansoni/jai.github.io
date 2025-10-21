@@ -1,226 +1,505 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jai Kishan Soni - PHP Developer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="description" content="Welcome to the personal website of Jai Kishan Soni, PHP Developer by profession. Learn more here." />
+    <title>Jai Kishan Soni | PHP Developer | Web Developer | Super Optimist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Jai Kishan Soni</a>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="Jai-Kishan-Soni-PHP-Developer.pdf" download="Jai-Kishan-Soni-PHP-Developer-Resume.pdf" class="nav-link resume-btn"><i class="fas fa-download"></i> Resume</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <nav id="navbar" class="navbar navbar-expand-lg fixed-top navbar-light fade-in">
+        <div class="container">
+            <a class="navbar-brand" href="#home">Jai Kishan Soni</a>
+            <button class="navbar-toggler custom-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <div class="animated-toggler">
+                    <span style="margin-top: 0px;" class="icon-bar top-bar"></span>
+                    <span style="margin-top: 4px;" class="icon-bar middle-bar"></span>
+                    <span style="margin-top: 4px;" class="icon-bar bottom-bar"></span>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link left-underline" href="#about">About</a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link left-underline" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link left-underline" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link left-underline" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link left-underline" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item" data-toggle="collapse" data-target=".navbar-collapse.show">
+                        <a class="nav-link left-underline" href="Jai-Kishan-Soni-PHP-Developer.pdf">Resume</a>
+                    </li>
+                </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <img src="image-slider.jpg" alt="Background" class="hero-bg-image">
+    <div id="hero" class="hero">
+        <div class="hero-text">
+            <h1 class="name-text slide-up">Jai Kishan Soni</h1>
+            <hr class="zoom-in" />
+            <h1 class="swe-text slide-down">PHP Developer</h1>
+            <ul class="list-inline fade-in">
+                <li class="list-inline-item">
+                    <a href="https://github.com/jaikishansoni">
+                        <i style="padding-right: 1rem;" class="landing-list-icon fab fa-github fa-3x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/jaikishansoni">
+                        <i style="padding-right: 1rem;" class="landing-list-icon fab fa-linkedin fa-3x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://example.com">
+                        <i style="padding-right: 1rem;" class="landing-list-icon fas fa-globe fa-3x"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="mailto:sonijai64@gmail.com">
+                        <i class="landing-list-icon fas fa-envelope fa-3x"></i>
+                    </a>
+                </li>
+            </ul>
         </div>
-        <div class="hero-container">
-            <h1 class="hero-title">Jai Kishan Soni</h1>
-            <div class="hero-divider"></div>
-            <h2 class="hero-subtitle">PHP Developer</h2>
-            <p class="hero-description">
-                Passionate PHP Developer with expertise in building robust web applications and backend systems. 
-                I love creating efficient, scalable solutions that drive business growth and enhance user experiences.
-            </p>
-        </div>
-    </section>
+    </div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <div id="about" class="about-me">
         <div class="container">
-            <h2 class="section-title">My Elevator Pitch 👋🏽</h2>
-            <div class="about-content">
-                <p>
-                    My name is Jai Kishan Soni and I am a passionate PHP Developer with expertise in building robust web applications and backend systems. 
-                    I love to create efficient, scalable solutions that drive business growth and enhance user experiences. 
-                    My engagements involve full-stack development, API design, database optimization, and system architecture.
-                </p>
-                <p>
-                    I specialize in PHP frameworks like Laravel, CodeIgniter, and Symfony, along with modern frontend technologies. 
-                    I get a chance to use my superpowers to build innovative web solutions that solve real-world problems and deliver exceptional user experiences.
-                </p>
-                <p>
-                    When I am not coding, you can find me exploring new technologies, contributing to open-source projects, or learning about the latest trends in web development.
-                </p>
+            <h1 class="section-title animation-element fade-in-bottom">My Elevator Pitch <span class="wave">👋🏽</span></h1>
+            <div class="row">
+                <div class="col-lg about-me-img animation-element slide-right">
+                    <img loading="lazy" src="aboutme.jpg" />
+                </div>
+                <div class="col-lg about-me-text animation-element slide-left">
+                    <p>My name is Jai Kishan Soni and I am a passionate PHP Developer with expertise in building robust web applications and backend systems. I am passionate about what I do and always give 100%. When I undertake a project or task, I don't just complete it, I go the extra mile and make it better than requested.</p>
+                    <p>I am a highly resourceful, innovative, and competent Website Developer with experience in the layout, design, and coding of websites specifically in PHP & CMS format. I possess considerable knowledge of the development of web applications and scripts using PHP programming language and MySQL & SQL Server databases.</p>
+                    <p>I have experience in developing applications and solutions for a wide range of corporate and public sector clients and have the enthusiasm and ambition to complete projects to the highest standard as well as an ability to convert client requirements into exciting online applications.</p>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
+    <div id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">What I'm good at 👨🏽‍💻</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
+            <h1 class="skills-section-title animation-element fade-in-bottom">What I'm good at <span>👨🏽‍💻</span></h1>
+            <div class="row skills-lists">
+                <div class="col-md-4 list-col animation-element fade-in-bottom">
                     <h3>Languages</h3>
                     <ul>
                         <li>PHP</li>
                         <li>JavaScript</li>
-                        <li>HTML/CSS</li>
-                        <li>SQL</li>
+                        <li>Node.js</li>
+                        <li>HTML5/CSS3</li>
+                        <li>jQuery</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="col-md-4 list-col animation-element fade-in-bottom">
                     <h3>Frameworks</h3>
                     <ul>
                         <li>Laravel</li>
                         <li>CodeIgniter</li>
-                        <li>Symfony</li>
-                        <li>Bootstrap</li>
+                        <li>CakePHP</li>
+                        <li>Yii2</li>
+                        <li>Express.js</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools & Databases</h3>
+                <div class="col-md-4 list-col animation-element fade-in-bottom">
+                    <h3>Databases</h3>
                     <ul>
                         <li>MySQL</li>
-                        <li>PostgreSQL</li>
-                        <li>Git</li>
-                        <li>Composer</li>
+                        <li>MongoDB</li>
+                        <li>SQL Server</li>
+                        <li>NoSQL</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Technologies</h3>
+                <div class="col-md-4 list-col animation-element fade-in-bottom">
+                    <h3>Tools & IDE</h3>
                     <ul>
-                        <li>RESTful APIs</li>
-                        <li>AJAX</li>
-                        <li>jQuery</li>
-                        <li>Apache/Nginx</li>
+                        <li>Visual Studio Code</li>
+                        <li>NetBeans</li>
+                        <li>Git</li>
+                        <li>Jira</li>
+                        <li>XAMPP</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 list-col animation-element fade-in-bottom">
+                    <h3>APIs & Payment</h3>
+                    <ul>
+                        <li>REST APIs</li>
+                        <li>Stripe</li>
+                        <li>PayPal</li>
+                        <li>RazorPay</li>
+                        <li>Google Maps API</li>
+                    </ul>
+                </div>
+                <div class="col-md-4 list-col animation-element fade-in-bottom">
+                    <h3>DevOps & OS</h3>
+                    <ul>
+                        <li>Jenkins</li>
+                        <li>SonarCube</li>
+                        <li>Linux Ubuntu</li>
+                        <li>Windows</li>
+                        <li>Agile-Scrum</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
+    <div id="experience" class="experience">
         <div class="container">
-            <h2 class="section-title">My 9-5 Experiences 💼</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2023 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Senior PHP Developer</h3>
-                        <h4>Web Development Company</h4>
-                        <p>Leading development of enterprise-level web applications using Laravel and modern PHP frameworks. Implementing RESTful APIs, optimizing database performance, and mentoring junior developers.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2021 - 2023</div>
-                    <div class="timeline-content">
-                        <h3>PHP Developer</h3>
-                        <h4>Tech Solutions Inc.</h4>
-                        <p>Developed and maintained multiple web applications using PHP, MySQL, and JavaScript. Collaborated with cross-functional teams to deliver high-quality software solutions and improve system performance.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2019 - 2021</div>
-                    <div class="timeline-content">
-                        <h3>Junior PHP Developer</h3>
-                        <h4>Startup Company</h4>
-                        <p>Started my journey as a PHP developer, building dynamic websites and learning modern development practices. Gained experience in full-stack development and database design.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Coded on a 🍕 diet</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>E-Commerce Platform</h3>
-                    <p>Built a full-featured e-commerce platform using Laravel with payment integration, inventory management, and admin dashboard.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>RESTful API System</h3>
-                    <p>Developed a comprehensive RESTful API using PHP with JWT authentication, rate limiting, and comprehensive documentation.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <h3>Content Management System</h3>
-                    <p>Created a custom CMS using CodeIgniter with multi-user support, role-based permissions, and dynamic content management.</p>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Stay in Touch 😊</h2>
-            <p class="contact-description">
-                If you have any questions about my experiences, a new employment opportunity, 
-                an idea for the next big startup, a resume that needs a second pair of eyes 
-                or want to say hi, feel free to message me!
-            </p>
-            <div class="contact-links">
-                <a href="mailto:jaikishansoni@example.com" class="contact-btn">
-                    <i class="fas fa-envelope"></i>
-                    Send an Email!
+            <h1 class="experience-section-title animation-element fade-in-bottom">My 9-5 Experiences <span>💼</span></h1>
+            <div class="exp-desc animation-element fade-in-bottom">
+                <p>Below I have illustrated a timeline of my work experiences. For a brief overview of my most important tech-driven roles, check out my résumé.</p>
+                <a href="Jai-Kishan-Soni-PHP-Developer.pdf">
+                    <button class="btn btn-outline-light resume-btn">Résumé</button>
                 </a>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    <div class="timeline animation-element fade-in-icon">
+                        <div class="timeline-box">
+                            <div class="timeline-box-left animation-element slide-right">
+                                <h5>Apr 2024 - Feb 2025</h5>
+                            </div>
+                            <div class="timeline-icon animation-element fade-in-icon"></div>
+                            <div class="timeline-box-right animation-element slide-left">
+                                <div class="timeline-content">
+                                    <div>
+                                        <a href="#" class="timeline-company left-underline">ForwardCode TechStudio</a>
+                                    </div>
+                                    <h5 class="timeline-role">PHP Developer</h5>
+                                    <div class="timeline-date">
+                                        <h5>Apr 2024 - Feb 2025</h5>
+                                    </div>
+                                    <p class="description">REST API Developer using Node.js with Express Framework with Mongoose Database. Building PHP websites using PHP based frameworks and developing compatible User Interface functionality using jQuery & other libraries.</p>
+                                    <ul class="list-inline work-tags-list">
+                                        <li class="list-inline-item work-tag">Node.js</li>
+                                        <li class="list-inline-item work-tag">Express.js</li>
+                                        <li class="list-inline-item work-tag">MongoDB</li>
+                                        <li class="list-inline-item work-tag">PHP</li>
+                                        <li class="list-inline-item work-tag">jQuery</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-box">
+                            <div class="timeline-box-left animation-element slide-right">
+                                <h5>Apr 2019 - Aug 2023</h5>
+                            </div>
+                            <div class="timeline-icon animation-element fade-in-icon"></div>
+                            <div class="timeline-box-right animation-element slide-left">
+                                <div class="timeline-content">
+                                    <div>
+                                        <a href="#" class="timeline-company left-underline">Matellio Navigating Ideas</a>
+                                    </div>
+                                    <h5 class="timeline-role">PHP Developer</h5>
+                                    <div class="timeline-date">
+                                        <h5>Apr 2019 - Aug 2023</h5>
+                                    </div>
+                                    <p class="description">Back end development and maintenance of websites using PHP and MySQL. Developing web sites using MySQL, MongoDB PHP, Codeigniter & other Laravel PHP Frameworks. Working with multidisciplinary teams to convert business needs into technical specifications.</p>
+                                    <ul class="list-inline work-tags-list">
+                                        <li class="list-inline-item work-tag">Laravel</li>
+                                        <li class="list-inline-item work-tag">CodeIgniter</li>
+                                        <li class="list-inline-item work-tag">MySQL</li>
+                                        <li class="list-inline-item work-tag">MongoDB</li>
+                                        <li class="list-inline-item work-tag">PHP</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-box">
+                            <div class="timeline-box-left animation-element slide-right">
+                                <h5>May 2018 - Apr 2019</h5>
+                            </div>
+                            <div class="timeline-icon animation-element fade-in-icon"></div>
+                            <div class="timeline-box-right animation-element slide-left">
+                                <div class="timeline-content">
+                                    <div>
+                                        <a href="#" class="timeline-company left-underline">Compton Infotech Pvt Ltd</a>
+                                    </div>
+                                    <h5 class="timeline-role">PHP Developer</h5>
+                                    <div class="timeline-date">
+                                        <h5>May 2018 - Apr 2019</h5>
+                                    </div>
+                                    <p class="description">Planning and conducting cross-browser usability testing against W3C. Testing and validating work produced as part of the development process. Documenting features, technical specifications & infrastructure requirements.</p>
+                                    <ul class="list-inline work-tags-list">
+                                        <li class="list-inline-item work-tag">PHP</li>
+                                        <li class="list-inline-item work-tag">MySQL</li>
+                                        <li class="list-inline-item work-tag">W3C</li>
+                                        <li class="list-inline-item work-tag">Testing</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-box">
+                            <div class="timeline-box-left animation-element slide-right">
+                                <h5>May 2017 - Apr 2018</h5>
+                            </div>
+                            <div class="timeline-icon animation-element fade-in-icon"></div>
+                            <div class="timeline-box-right animation-element slide-left">
+                                <div class="timeline-content">
+                                    <div>
+                                        <a href="#" class="timeline-company left-underline">Apncoders Solutions Pvt Ltd</a>
+                                    </div>
+                                    <h5 class="timeline-role">PHP Developer</h5>
+                                    <div class="timeline-date">
+                                        <h5>May 2017 - Apr 2018</h5>
+                                    </div>
+                                    <p class="description">Developing web applications and solutions for corporate clients. Working with PHP frameworks and databases to deliver high-quality software solutions.</p>
+                                    <ul class="list-inline work-tags-list">
+                                        <li class="list-inline-item work-tag">PHP</li>
+                                        <li class="list-inline-item work-tag">MySQL</li>
+                                        <li class="list-inline-item work-tag">Web Development</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-box">
+                            <div class="timeline-box-left animation-element slide-right">
+                                <h5>May 2016 - May 2017</h5>
+                            </div>
+                            <div class="timeline-icon animation-element fade-in-icon"></div>
+                            <div class="timeline-box-right animation-element slide-left">
+                                <div class="timeline-content">
+                                    <div>
+                                        <a href="#" class="timeline-company left-underline">Nutcrackers Creative Agency</a>
+                                    </div>
+                                    <h5 class="timeline-role">PHP Developer</h5>
+                                    <div class="timeline-date">
+                                        <h5>May 2016 - May 2017</h5>
+                                    </div>
+                                    <p class="description">Building dynamic websites and learning modern development practices. Gained experience in full-stack development and database design.</p>
+                                    <ul class="list-inline work-tags-list">
+                                        <li class="list-inline-item work-tag">PHP</li>
+                                        <li class="list-inline-item work-tag">HTML/CSS</li>
+                                        <li class="list-inline-item work-tag">MySQL</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-box">
+                            <div class="timeline-box-left animation-element slide-right">
+                                <h5>Nov 2015 - Mar 2016</h5>
+                            </div>
+                            <div class="timeline-icon animation-element fade-in-icon"></div>
+                            <div class="timeline-box-right animation-element slide-left">
+                                <div class="timeline-content">
+                                    <div>
+                                        <a href="#" class="timeline-company left-underline">Freelancer</a>
+                                    </div>
+                                    <h5 class="timeline-role">PHP Developer</h5>
+                                    <div class="timeline-date">
+                                        <h5>Nov 2015 - Mar 2016</h5>
+                                    </div>
+                                    <p class="description">Working as a freelance PHP developer, building websites for various clients and gaining experience in different project types.</p>
+                                    <ul class="list-inline work-tags-list">
+                                        <li class="list-inline-item work-tag">PHP</li>
+                                        <li class="list-inline-item work-tag">Freelancing</li>
+                                        <li class="list-inline-item work-tag">Client Management</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-box">
+                            <div class="timeline-box-left animation-element slide-right">
+                                <h5>Oct 2014 - Oct 2015</h5>
+                            </div>
+                            <div class="timeline-icon animation-element fade-in-icon"></div>
+                            <div class="timeline-box-right animation-element slide-left">
+                                <div class="timeline-content">
+                                    <div>
+                                        <a href="#" class="timeline-company left-underline">Altus Tendo Technologies</a>
+                                    </div>
+                                    <h5 class="timeline-role">PHP Developer</h5>
+                                    <div class="timeline-date">
+                                        <h5>Oct 2014 - Oct 2015</h5>
+                                    </div>
+                                    <p class="description">Started my professional journey as a PHP developer, building dynamic websites and learning modern development practices.</p>
+                                    <ul class="list-inline work-tags-list">
+                                        <li class="list-inline-item work-tag">PHP</li>
+                                        <li class="list-inline-item work-tag">MySQL</li>
+                                        <li class="list-inline-item work-tag">HTML/CSS</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-box">
+                            <div class="timeline-box-left animation-element slide-right">
+                                <h5>Mar 2014 - Jun 2014</h5>
+                            </div>
+                            <div class="timeline-icon animation-element fade-in-icon"></div>
+                            <div class="timeline-box-right animation-element slide-left">
+                                <div class="timeline-content">
+                                    <div>
+                                        <a href="#" class="timeline-company left-underline">WS Cube Tech</a>
+                                    </div>
+                                    <h5 class="timeline-role">PHP Training</h5>
+                                    <div class="timeline-date">
+                                        <h5>Mar 2014 - Jun 2014</h5>
+                                    </div>
+                                    <p class="description">Completed comprehensive PHP training program covering core PHP concepts, frameworks, and web development best practices.</p>
+                                    <ul class="list-inline work-tags-list">
+                                        <li class="list-inline-item work-tag">PHP Training</li>
+                                        <li class="list-inline-item work-tag">Web Development</li>
+                                        <li class="list-inline-item work-tag">Learning</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <div id="projects" class="projects">
         <div class="container">
-            <p>Designed, developed and made with ❤️ by Jai Kishan Soni.</p>
+            <h1 style="color: black;" class="project-section-title animation-element fade-in-bottom">Recent Projects <span>🚀</span></h1>
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <h4>WatchmeSports</h4>
+                        <p><strong>Sports Streaming Platform</strong><br>
+                        Developed a comprehensive sports streaming platform with live match viewing, user registration, subscription management, and payment integration. Built using Laravel framework with MySQL database, featuring real-time streaming capabilities and user dashboard for managing subscriptions and viewing history.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Laravel</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Payment Gateway</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <h4>CECA</h4>
+                        <p><strong>Time Lock Documentation System</strong><br>
+                        Created a secure document management system with time-lock features for legal and corporate clients. Implemented advanced security measures, user authentication, document versioning, and automated time-based access controls. Features include document encryption, audit trails, and role-based permissions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">Document Management</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <h4>WealthSSL</h4>
+                        <p><strong>Wealth Management System</strong><br>
+                        Developed a comprehensive wealth management platform with admin panel for financial advisors and clients. Features include portfolio tracking, investment analysis, client management, reporting tools, and secure document sharing. Built with advanced security measures and compliance features for financial industry standards.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">CodeIgniter</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Admin Panel</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <h4>Fairface</h4>
+                        <p><strong>Beauty & Cosmetics E-commerce</strong><br>
+                        Built a full-featured e-commerce platform for beauty and cosmetics products. Includes product catalog, shopping cart, user accounts, order management, payment processing, and inventory tracking. Features advanced search filters, product reviews, wishlist functionality, and mobile-responsive design.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">E-commerce</span>
+                            <span class="tech-tag">Payment Integration</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <h4>Sheppard Agency</h4>
+                        <p><strong>Voice Talent Agency Platform</strong><br>
+                        Created a professional platform for voice talent agency with talent profiles, audio samples, booking system, and client management. Features include audio upload/playback, talent search and filtering, booking calendar, payment processing, and communication tools between clients and talent.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Audio Processing</span>
+                            <span class="tech-tag">Booking System</span>
+                            <span class="tech-tag">User Profiles</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="project-card">
+                        <h4>Coupon Code Platform</h4>
+                        <p><strong>Coupon & Discount Management</strong><br>
+                        Developed a comprehensive coupon and discount platform with merchant dashboard, coupon creation tools, user registration, and redemption tracking. Features include coupon validation, expiration management, analytics dashboard, and integration with multiple e-commerce platforms.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Coupon System</span>
+                            <span class="tech-tag">Analytics</span>
+                            <span class="tech-tag">Merchant Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contact" class="contact" style="color: white;">
+        <div class="container">
+            <h1 class="contact-section-title">Stay in Touch <span>😊</span></h1>
+            <p class="contact-description">If you have any questions about my experiences, a new employment opportunity, an idea for the next big startup, a resume that needs a second pair of eyes or want to say hi, feel free to message me!</p>
+            <div class="text-center">
+                <a href="mailto:sonijai64@gmail.com">
+                    <button type="button" class="btn btn-outline-primary email-btn">Send an Email!</button>
+                </a>
+            </div>
+            <div class="contact-description">
+                <p><strong>Phone:</strong> +91-8755473551</p>
+                <p><strong>Email:</strong> sonijai64@gmail.com</p>
+                <p><strong>Location:</strong> Jodhpur, Rajasthan, India</p>
+                <br>
+                <ul class="list-inline">
+                    <li class="list-inline-item">
+                        <a href="https://github.com/jaikishansoni">
+                            <i style="padding-right: 1rem;" class="landing-list-icon fab fa-github fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.linkedin.com/in/jai-soni-a03476a7/">
+                            <i style="padding-right: 1rem;" class="landing-list-icon fab fa-linkedin fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://jaikishansoni.github.io/jai.github.io/">
+                            <i style="padding-right: 1rem;" class="landing-list-icon fas fa-globe fa-2x"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="mailto:sonijai64@gmail.com">
+                            <i class="landing-list-icon fas fa-paper-plane fa-2x"></i>
+                        </a>
+                    </li>
+                </ul>
+                <div class="footer-text">
+                    Designed, developed and made with <i style="color: #690002;" class="fas fa-heart"></i> by Jai Kishan Soni.
+                </div>
+            </div>
         </div>
     </footer>
 
+    <script src="https://kit.fontawesome.com/09e5d19d1f.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>

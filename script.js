@@ -2,15 +2,19 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+    });
+}
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
+    if (hamburger && navMenu) {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
 }));
 
 // Smooth scrolling for navigation links
@@ -31,24 +35,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+        navbar.classList.add('scrolled');
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
+        navbar.classList.remove('scrolled');
     }
 });
 
 // Active navigation link highlighting
 window.addEventListener('scroll', () => {
     let current = '';
-    const sections = document.querySelectorAll('section');
+    const sections = document.querySelectorAll('section, .about-me, .skills, .experience, .projects, .contact');
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
         if (scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
+            current = section.getAttribute('id') || section.className.split(' ')[0];
         }
     });
 
@@ -69,20 +71,16 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
+            entry.target.classList.add('fade-in-bottom');
         }
     });
 }, observerOptions);
 
 // Observe elements for animation
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.skill-category, .timeline-item, .project-card');
+    const animateElements = document.querySelectorAll('.animation-element');
     
     animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
 });
@@ -105,7 +103,7 @@ function typeWriter(element, text, speed = 100) {
 
 // Initialize typing animation when page loads
 window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
+    const heroTitle = document.querySelector('.name-text');
     if (heroTitle) {
         const originalText = heroTitle.textContent;
         typeWriter(heroTitle, originalText, 150);
@@ -121,76 +119,62 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Image slider opacity effect
-document.addEventListener('DOMContentLoaded', () => {
-    const heroImage = document.querySelector('.hero-bg-image');
-    const heroContainer = document.querySelector('.hero-container');
-    
-    if (heroImage && heroContainer) {
-        // Add hover effect to change opacity
-        heroContainer.addEventListener('mouseenter', () => {
-            heroImage.style.opacity = '0.6';
-            heroContainer.style.background = 'rgba(0, 0, 0, 0.6)';
-        });
-        
-        heroContainer.addEventListener('mouseleave', () => {
-            heroImage.style.opacity = '0.4';
-            heroContainer.style.background = 'rgba(0, 0, 0, 0.3)';
-        });
-        
-        // Add scroll effect to change opacity
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroSection = document.querySelector('.hero');
-            const heroHeight = heroSection.offsetHeight;
-            
-            if (scrolled < heroHeight) {
-                const opacity = Math.max(0.2, 0.4 - (scrolled * 0.0003));
-                heroImage.style.opacity = opacity;
-                
-                // Fade out text as user scrolls
-                const textOpacity = Math.max(0.3, 1 - (scrolled * 0.002));
-                heroContainer.style.opacity = textOpacity;
-            }
-        });
-        
-        // Add parallax effect to the background image
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroSection = document.querySelector('.hero');
-            const heroHeight = heroSection.offsetHeight;
-            
-            if (scrolled < heroHeight) {
-                const translateY = scrolled * 0.5;
-                heroImage.style.transform = `translateY(${translateY}px)`;
-            }
-        });
+// Add loading animation
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+    document.body.classList.remove('loading');
+});
+
+// Add CSS for loading state
+const style = document.createElement('style');
+style.textContent = `
+    body.loading {
+        overflow: hidden;
     }
-});
-
-// Form handling (if you add a contact form later)
-function handleContactForm(event) {
-    event.preventDefault();
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData);
     
-    // Here you would typically send the data to a server
-    console.log('Form data:', data);
+    body.loading::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
-    // Show success message
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    event.target.reset();
-}
+    body.loading::after {
+        content: 'Loading...';
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 600;
+        z-index: 10000;
+    }
+    
+    .navbar.scrolled {
+        background: rgba(255, 255, 255, 0.98) !important;
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-link.active {
+        color: #007bff !important;
+    }
+    
+    .nav-link.active::after {
+        width: 100% !important;
+    }
+`;
+document.head.appendChild(style);
 
-// Add click handlers for project links
-document.querySelectorAll('.project-link').forEach(link => {
-    link.addEventListener('click', (e) => {
-        if (link.getAttribute('href') === '#') {
-            e.preventDefault();
-            alert('This project is coming soon!');
-        }
-    });
-});
+// Initialize loading state
+document.body.classList.add('loading');
 
 // Resume download functionality
 document.addEventListener('DOMContentLoaded', () => {
@@ -200,13 +184,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Add download animation
             resumeBtn.style.transform = 'scale(0.95)';
             resumeBtn.style.background = '#28a745';
-            resumeBtn.innerHTML = '<i class="fas fa-download"></i> Downloading...';
+            resumeBtn.innerHTML = 'Downloading...';
             
             // Reset button after animation
             setTimeout(() => {
                 resumeBtn.style.transform = 'scale(1)';
-                resumeBtn.style.background = '#007bff';
-                resumeBtn.innerHTML = 'Resume';
+                resumeBtn.style.background = '';
+                resumeBtn.innerHTML = 'Résumé';
             }, 2000);
             
             // Show success message
@@ -254,8 +238,44 @@ function showNotification(message, type = 'info') {
     }, 3000);
 }
 
+// Add CSS for notifications
+const notificationStyle = document.createElement('style');
+notificationStyle.textContent = `
+    .notification {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        padding: 1rem;
+        z-index: 10000;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+    
+    .notification.show {
+        transform: translateX(0);
+    }
+    
+    .notification-success {
+        border-left: 4px solid #28a745;
+    }
+    
+    .notification-content {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .notification-content i {
+        color: #28a745;
+    }
+`;
+document.head.appendChild(notificationStyle);
+
 // Add hover effects for skill categories
-document.querySelectorAll('.skill-category').forEach(category => {
+document.querySelectorAll('.list-col').forEach(category => {
     category.addEventListener('mouseenter', () => {
         category.style.transform = 'translateY(-10px) scale(1.02)';
     });
@@ -265,48 +285,8 @@ document.querySelectorAll('.skill-category').forEach(category => {
     });
 });
 
-// Add loading animation
-window.addEventListener('load', () => {
-    document.body.classList.add('loaded');
-});
-
-// Add CSS for loading state
-const style = document.createElement('style');
-style.textContent = `
-    body:not(.loaded) {
-        overflow: hidden;
-    }
-    
-    body:not(.loaded)::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        z-index: 9999;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    body:not(.loaded)::after {
-        content: 'Loading...';
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-size: 1.5rem;
-        font-weight: 600;
-        z-index: 10000;
-    }
-`;
-document.head.appendChild(style);
-
 // Add smooth reveal animation for sections
-const revealElements = document.querySelectorAll('section');
+const revealElements = document.querySelectorAll('.about-me, .skills, .experience, .projects, .contact');
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -322,13 +302,13 @@ revealElements.forEach(el => {
 // Add CSS for reveal animation
 const revealStyle = document.createElement('style');
 revealStyle.textContent = `
-    section {
+    .about-me, .skills, .experience, .projects, .contact {
         opacity: 0;
         transform: translateY(50px);
         transition: opacity 0.8s ease, transform 0.8s ease;
     }
     
-    section.revealed {
+    .about-me.revealed, .skills.revealed, .experience.revealed, .projects.revealed, .contact.revealed {
         opacity: 1;
         transform: translateY(0);
     }
@@ -339,3 +319,19 @@ revealStyle.textContent = `
     }
 `;
 document.head.appendChild(revealStyle);
+
+// Add click handlers for project links
+document.querySelectorAll('.project-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        if (link.getAttribute('href') === '#') {
+            e.preventDefault();
+            showNotification('This project is coming soon!', 'info');
+        }
+    });
+});
+
+// Initialize page
+document.addEventListener('DOMContentLoaded', () => {
+    // Add any initialization code here
+    console.log('Portfolio website loaded successfully!');
+});
