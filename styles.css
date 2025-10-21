@@ -61,6 +61,23 @@ body {
     color: var(--primary-color);
     text-decoration: none;
     white-space: nowrap;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand:hover {
+    color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.brand-short {
+    display: none;
+}
+
+.brand-full {
+    display: inline;
 }
 
 .nav-link {
@@ -137,11 +154,14 @@ body {
 @media (max-width: 991px) {
     .navbar-brand {
         font-size: 1.1rem;
+        padding: 0.25rem 0;
+        margin-bottom: 0.5rem;
     }
     
     .navbar .container {
         flex-direction: column;
         align-items: flex-start;
+        padding: 0.5rem 1rem;
     }
     
     .navbar-collapse {
@@ -171,6 +191,51 @@ body {
     .navbar-nav.ml-auto {
         margin-left: 0;
         margin-top: 1rem;
+    }
+}
+
+/* Additional mobile responsive styles for navbar-brand */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1rem;
+        padding: 0.25rem 0;
+        margin-bottom: 0.25rem;
+        text-align: center;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .navbar .container {
+        padding: 0.25rem 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-brand {
+        font-size: 0.9rem;
+        padding: 0.25rem 0;
+        margin-bottom: 0.25rem;
+        line-height: 1.2;
+    }
+    
+    .navbar .container {
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .navbar-brand {
+        font-size: 0.85rem;
+        padding: 0.2rem 0;
+        margin-bottom: 0.2rem;
+    }
+    
+    .brand-full {
+        display: none;
+    }
+    
+    .brand-short {
+        display: inline;
     }
 }
 
@@ -260,6 +325,85 @@ body {
 .landing-list-icon:hover {
     transform: translateY(-5px);
     color: #ffd700;
+}
+
+/* Social links styling */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-links .list-inline-item {
+    margin: 0;
+}
+
+.social-links a {
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* Mobile responsive styles for header social links */
+@media (max-width: 768px) {
+    .hero .social-links {
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+    }
+    
+    .hero .social-links .list-inline-item {
+        margin: 0;
+    }
+    
+    .landing-list-icon {
+        font-size: 2.5rem !important;
+        margin: 0;
+        padding: 0.5rem;
+    }
+    
+    .social-links a {
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero .social-links {
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .landing-list-icon {
+        font-size: 2rem !important;
+        margin: 0;
+        padding: 0.25rem;
+    }
+    
+    .social-links a {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .hero .social-links {
+        gap: 0.25rem;
+    }
+    
+    .landing-list-icon {
+        font-size: 1.75rem !important;
+    }
+    
+    .social-links a {
+        padding: 0.25rem;
+    }
 }
 
 /* About Section */
